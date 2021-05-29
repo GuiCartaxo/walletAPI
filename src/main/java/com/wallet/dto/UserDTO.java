@@ -5,10 +5,14 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 import lombok.Data;
 
 @SuppressWarnings("deprecation")
 @Data
+@JsonInclude(value = Include.NON_NULL)
 public class UserDTO {
 
 	private Long id;
